@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: vroom-laravel
+    env: docker
+    repo: https://github.com/Ivontsoa-Gracia/mini-projet.git
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_KEY
+        value: base64:xxxxxxxxxxxxxx
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_HOST
+        value: postgres
+      - key: DB_PORT
+        value: 5432
+      - key: DB_DATABASE
+        value: miniprojet_bd
+      - key: DB_USERNAME
+        value: laravel_user
+      - key: DB_PASSWORD
+        value: secret
